@@ -150,12 +150,12 @@ int main() {
 
     // Print student list as a table to a text file
     FILE *file = fopen("student_list.txt", "w");
-    fprintf(file, "+--------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
-    fprintf(file, "|  Student ID  |          Full Name         |    Birthdate    | Algebra | Calculus| Basic Programming |   GPA  |\n");
-    fprintf(file, "+--------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
+    fprintf(file, "+-------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
+    fprintf(file, "|  Student ID |          Full Name         |    Birthdate    | Algebra | Calculus| Basic Programming |   GPA  |\n");
+    fprintf(file, "+-------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
 
     for (int i = 0; i < numOfStudents; i++) {
-        fprintf(file, "| %5s   | %-26s |    %1s/%2s/%3s   | %6.2f  | %6.2f  |%12.2f       | %6.2f |\n",
+        fprintf(file, "| %5s    | %-26s |    %1s/%2s/%3s   | %6.2f  | %6.2f  |%12.2f       | %6.2f |\n",
             students[i].studentID,
             strcat(strcat(students[i].lastName, " "), students[i].firstName),
             students[i].bir,
@@ -165,7 +165,7 @@ int main() {
             students[i].calculusGrade,
             students[i].programmingGrade,
             students[i].gpa);
-        fprintf(file, "+--------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
+        fprintf(file, "+-------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
     }
 
     fclose(file);
