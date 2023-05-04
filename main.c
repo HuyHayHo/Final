@@ -16,7 +16,7 @@ int main() {
 
     fp = fopen("input.txt", "r");
     if (fp == NULL) {
-        printf("Khong the mo file");
+        printf("Cannot open to file");
         return 1;
     }
 
@@ -25,12 +25,12 @@ int main() {
     }
 
     fclose(fp);
-
+    printf("\n");
+    
     char c;
     printf("Press Enter to continue...");
     scanf("%c", &c);
     printf("Start the final project %c\n", c);
-    
     int numOfStudents;
     do
     {
